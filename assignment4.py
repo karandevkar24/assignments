@@ -54,15 +54,15 @@ class linkedlist:
         return merge_head
         
 l1=linkedlist()
-l1.insert_multiple(10,20,30,40,50)
-l1.display()
 l2=linkedlist()
-l2.insert_multiple(11,22,33,44,55)
-l2.display()
 l3=linkedlist()
+merged=linkedlist()
+l1.insert_multiple(10,20,30,40,50)
+l2.insert_multiple(11,22,33,44,55)
 l3.insert_multiple(15,25,35,45,60)
+l1.display()
+l2.display()
 l3.display()
 lists=[l1.head,l2.head,l3.head]
-me=linkedlist()
-me.head=me.merge_k_list(lists)
-me.display()
+merged.head=merged.merge_k_list(lists)
+merged.display()
