@@ -30,6 +30,11 @@ def insert(root,data):
     if balance >1 and data>root.left.data:
         root.left=left_rotate(root.left)
         return right_rotate(root)
+
+    if balance<-1 and data<root.left.data:
+        root.right=right_rotate(root.rigt)
+        return left_rotate(root)
+        
     return root
 
 def left_rotate(y):
@@ -71,6 +76,7 @@ def search(root,key):
         else:
             root=root.right
     return None
+    
 def find_predecessor(root,key):
     node=search(root,key)
     if node is None:
